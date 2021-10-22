@@ -15,60 +15,122 @@
 
 /*content style*/
 #Content{
-    width: 70vw;
-    height: 70vh;
-    padding: 20px;
+    width: 60vw;
+    height: 68vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    row-gap: 20px;
-    column-gap: 20px;
+    column-gap: 30px;
+    row-gap: 10px;
     margin: 0 auto;
     align-self: center;
-    border: 1px solid white;
 }
 
 /*principal card*/
 #PrincipalCard{
+    height: 100%;
+    width: 100%;
     grid-column: 1;
-    grid-row: 1 span 2 ;
-    border: 1px solid white;
+    grid-row: 1 / span 2 ;
+}
+/**/
+.card{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    overflow: hidden;
+}
+.card img{
+    margin-right: 10px;
+    width: 30%;
+    position: relative;
+    bottom: 3px;
+}
+#card5 img{
+    transform: rotate(30deg);
+    bottom: 8px;
+    width: 39px;
 }
 
-/*cards*/
+/*cards position*/
 #card1{
     grid-row: 1;
-    grid-column: 2;
-    border: 1px solid white;
+    grid-column: 2; 
 }
 
 #card2{
     grid-column: 3;
     grid-row: 1;
-    border: 1px solid white;
 }
 
 #card3{
     grid-column: 4;
     grid-row: 1;
-    border: 1px solid white;
 }
 
 #card4{
     grid-column: 2;
     grid-row: 2;
-    border: 1px solid white;
 }
 
 #card5{
     grid-column: 3;
     grid-row: 2;
-    border: 1px solid white;
 }
 
 #card6{
     grid-column: 4;
     grid-row: 2;
-    border: 1px solid white;
 }
 
+/*general card style*/
+.background{
+    height: 100px;
+    position: relative;
+    border-radius: 15px;
+}
+.description{
+    height: 105%;
+    position: relative;
+    bottom: 30px;
+    border-radius: 15px;
+    background-color: hsl(235, 46%, 20%);
+}
+
+/*individual card background color*/
+.backCard1{
+    background-color: hsl(15, 100%, 70%);
+}
+.backCard2{
+    background-color: hsl(195, 74%, 62%);
+}
+.backCard3{
+    background-color: hsl(348, 100%, 68%);
+}
+.backCard4{
+    background-color: hsl(145, 58%, 55%);
+}
+.backCard5{
+    background-color: hsl(264, 64%, 52%);
+}
+.backCard6{
+    background-color: hsl(43, 84%, 65%);
+}
+
+/*principal card style */
+.PrincipalCardBack{
+    height: 65%;
+    position: relative;
+    border-radius: 15px;
+    z-index: 1;
+    background-color:hsl(246, 80%, 60%);
+}
+.PrincipalCardDesc{
+    height: 35%;
+    position: relative;
+    bottom: 30px;
+    border-radius: 15px;
+    background-color: hsl(235, 46%, 20%);
+}
