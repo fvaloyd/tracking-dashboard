@@ -38,7 +38,7 @@
 /*content style*/
 #Content{
     width: 60vw;
-    height: 68vh;
+    height: 63vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -121,7 +121,7 @@
 }
 /*hover description*/
 .description:hover{
-    background-color: hsl(235, 36%, 46%);
+    background-color: hsl(235, 39%, 41%);
 }
 /*individual card background color*/
 .backCard1{
@@ -145,16 +145,105 @@
 
 /*principal card style */
 .PrincipalCardBack{
+    display: flex;
+    flex-direction: column;
     height: 65%;
     position: relative;
+    padding: 20px;
+    text-align: left;
     border-radius: 15px;
     z-index: 1;
     background-color:hsl(246, 80%, 60%);
 }
 .PrincipalCardDesc{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px;
     height: 35%;
     position: relative;
     bottom: 30px;
     border-radius: 15px;
     background-color: hsl(235, 46%, 20%);
+}
+
+/*principal card content style*/
+.PrincipalCardBack img{
+    width: 70px;
+    height: 70px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+.PrincipalCardBack span{
+    font-family: "Rubik";
+    font-size: 13px;
+    font-weight: 400;
+    color: #aaa;
+}
+.PrincipalCardBack h2{
+    font-family: "Rubik";
+    font-size: 35px;
+    font-weight: 300;
+    color: white;
+}
+
+.PrincipalCardDesc ul{
+    margin-top: 30px;
+}
+.PrincipalCardDesc li{
+    list-style: none;
+    margin-bottom: 15px;
+}
+.PrincipalCardDesc a {
+    text-decoration: none;
+    color: var(--desaturated);
+    font-family: "Rubik";
+    cursor: pointer;
+    transition: all 300ms;
+}
+.PrincipalCardDesc a:hover{
+    color: white;
+}
+
+/*card content style*/
+.description{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px;
+}
+.description .CardHead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.description .CardHead h3{
+    color: white;
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 18px;
+}
+.description .CardHead span{
+    font-size: 15px;
+    color: #ccc;
+    transition: all 200ms;
+    cursor: pointer;
+}
+.description .CardHead span:hover{
+    color: white;
+}
+.description h2{
+    font-family: 'Rubik';
+    font-weight: 300;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 7px;
+}
+.description p{
+    font-family: 'Rubik';
+    font-size: 13px;
+    color: var(--desaturated);
 }
