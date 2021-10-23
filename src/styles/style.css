@@ -4,6 +4,28 @@
     margin: 0;
     box-sizing: border-box;
 }
+/*variables*/
+:root{
+    --blue: hsl(246, 80%, 60%);
+
+    --LightRed: hsl(15, 100%, 70%);
+    --SoftBlue: hsl(195, 74%, 62%);
+    --LightRed2: hsl(348, 100%, 68%);
+    --LimeGreen: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --SoftOrange: hsl(43, 84%, 65%);
+
+    --veryDarkBlue: hsl(226, 43%, 10%);
+    --darkBlue: hsl(235, 46%, 20%);
+    --desaturated: hsl(235, 45%, 61%);
+    --paleBlue: hsl(236, 100%, 87%);
+}
+/*fuente*/
+@font-face {
+    font-family: "Rubik";
+    src: url("https://fonts.google.com/specimen/Rubik");
+    font-weight: 300, 400, 500;
+}
 
 /*screen style*/
 #ScreenContainer{
@@ -49,11 +71,8 @@
     bottom: 3px;
 }
 #card5 img{
-    transform: rotate(30deg);
-    bottom: 8px;
-    width: 39px;
+    object-fit: cover;
 }
-
 /*cards position*/
 #card1{
     grid-row: 1;
@@ -97,8 +116,13 @@
     bottom: 30px;
     border-radius: 15px;
     background-color: hsl(235, 46%, 20%);
+    transition: all 300ms;
+    cursor: pointer;
 }
-
+/*hover description*/
+.description:hover{
+    background-color: hsl(235, 36%, 46%);
+}
 /*individual card background color*/
 .backCard1{
     background-color: hsl(15, 100%, 70%);
