@@ -59,19 +59,25 @@ const plantilla = (currentWork,lastWork,currentPlay,lastPlay,currentStudy,lastSt
 
 daily.addEventListener('click', ()=>{
     plantilla(work.currentDay,work.previousDay, play.currentDay,play.previousDay, study.currentDay, study.previousDay, exercise.currentDay, exercise.previousDay, social.currentDay, social.previousDay, self.currentDay, self.previousDay, "Day");
-    return console.log("hecho");
+    daily.style.color = 'white';
+    weekly.style.color = '';
+    monthly.style.color = '';
 });
 
 weekly.addEventListener('click', ()=>{
     plantilla(work.currentWeek,work.previousWeek, play.currentWeek,play.previousWeek, study.currentWeek, study.previousWeek, exercise.currentWeek, exercise.previousWeek, social.currentWeek, social.previousWeek, self.currentWeek, self.previousWeek, "Week");
-    return console.log("hecho");
+    weekly.style.color = 'white';
+    daily.style.color = '';
+    monthly.style.color ='';
 });
 
 monthly.addEventListener('click', ()=>{
     plantilla(work.currentMonth,work.previousMonth, play.currentMonth,play.previousMonth, study.currentMonth, study.previousMonth, exercise.currentMonth, exercise.previousMonth, social.currentMonth, social.previousMonth, self.currentMonth, self.previousMonth, "Month");
-    return console.log("hecho");
+    monthly.style.color = 'white';
+    daily.style.color = '';
+    weekly.style.color = '';
 });
 
-
-
+plantilla(work.currentWeek,work.previousWeek, play.currentWeek,play.previousWeek, study.currentWeek, study.previousWeek, exercise.currentWeek, exercise.previousWeek, social.currentWeek, social.previousWeek, self.currentWeek, self.previousWeek, "Week");
+weekly.style.color = 'white';
 
