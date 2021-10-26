@@ -1,0 +1,448 @@
+/*general styles*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*variables*/
+:root{
+    --blue: hsl(246, 80%, 60%);
+
+    --LightRed: hsl(15, 100%, 70%);
+    --SoftBlue: hsl(195, 74%, 62%);
+    --LightRed2: hsl(348, 100%, 68%);
+    --LimeGreen: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --SoftOrange: hsl(43, 84%, 65%);
+
+    --veryDarkBlue: hsl(226, 43%, 10%);
+    --darkBlue: hsl(235, 46%, 20%);
+    --desaturated: hsl(235, 45%, 61%);
+    --paleBlue: hsl(236, 100%, 87%);
+}
+/*fuente*/
+@font-face {
+    font-family: "Rubik";
+    src: url("https://fonts.google.com/specimen/Rubik");
+    font-weight: 300, 400, 500;
+}
+
+/*screen style*/
+#ScreenContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background: hsl(226, 43%, 10%);
+}
+
+/*content style*/
+#Content{
+    width: 60vw;
+    height: 63vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 10px;
+    margin: 0 auto;
+    align-self: center;
+}
+
+/*principal card*/
+#PrincipalCard{
+    height: 100%;
+    width: 100%;
+    grid-column: 1;
+    grid-row: 1 / span 2 ;
+}
+/**/
+.card{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    overflow: hidden;
+}
+.card img{
+    margin-right: 10px;
+    width: 100%;
+    position: relative;
+    bottom: 3px;
+}
+.img-div{
+    width: 70px;
+    height: 70px;
+}
+.icon-div{
+    width: 70px;
+    height: 70px;
+}
+#card5 img{
+    object-fit: cover;
+}
+/*cards position*/
+#card1{
+    grid-row: 1;
+    grid-column: 2; 
+}
+
+#card2{
+    grid-column: 3;
+    grid-row: 1;
+}
+
+#card3{
+    grid-column: 4;
+    grid-row: 1;
+}
+
+#card4{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#card5{
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#card6{
+    grid-column: 4;
+    grid-row: 2;
+}
+
+/*general card style*/
+.background{
+    height: 100px;
+    position: relative;
+    border-radius: 15px;
+}
+.description{
+    height: 105%;
+    position: relative;
+    bottom: 30px;
+    border-radius: 15px;
+    background-color: hsl(235, 46%, 20%);
+    transition: all 300ms;
+    cursor: pointer;
+}
+/*hover description*/
+.description:hover{
+    background-color: hsl(235, 39%, 41%);
+}
+/*individual card background color*/
+.backCard1{
+    background-color: hsl(15, 100%, 70%);
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.backCard2{
+    background-color: hsl(195, 74%, 62%);
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.backCard3{
+    background-color: hsl(348, 100%, 68%);
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.backCard4{
+    background-color: hsl(145, 58%, 55%);
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.backCard5{
+    background-color: hsl(264, 64%, 52%);
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.backCard6{
+    background-color: hsl(43, 84%, 65%);
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+/*principal card style */
+.PrincipalCardBack{
+    display: flex;
+    flex-direction: column;
+    height: 65%;
+    position: relative;
+    padding: 20px;
+    text-align: left;
+    border-radius: 15px;
+    z-index: 1;
+    background-color:hsl(246, 80%, 60%);
+}
+.PrincipalCardDesc{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px;
+    height: 35%;
+    position: relative;
+    bottom: 30px;
+    border-radius: 15px;
+    background-color: hsl(235, 46%, 20%);
+}
+
+/*principal card content style*/
+.PrincipalCardBack img{
+    width: 70px;
+    height: 70px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+.pc-desc{
+    margin-top: 35px;
+}
+.PrincipalCardBack span{
+    font-family: "Rubik";
+    font-size: 13px;
+    font-weight: 400;
+    color: #aaa;
+}
+.PrincipalCardBack h2{
+    font-family: "Rubik";
+    font-size: 35px;
+    font-weight: 300;
+    color: white;
+}
+
+.PrincipalCardDesc ul{
+    margin-top: 30px;
+}
+.PrincipalCardDesc li{
+    list-style: none;
+    margin-bottom: 15px;
+}
+.PrincipalCardDesc a {
+    text-decoration: none;
+    color: var(--desaturated);
+    font-family: "Rubik";
+    cursor: pointer;
+    transition: all 300ms;
+}
+.PrincipalCardDesc a:hover{
+    color: white;
+}
+
+/*card content style*/
+.description{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px;
+}
+.description .CardHead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.description .CardHead h3{
+    color: white;
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 18px;
+}
+.description .CardHead span{
+    font-size: 15px;
+    color: #ccc;
+    transition: all 200ms;
+    cursor: pointer;
+}
+.description .CardHead span:hover{
+    color: white;
+}
+.description h2{
+    font-family: 'Rubik';
+    font-weight: 300;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 7px;
+}
+.description p{
+    font-family: 'Rubik';
+    font-size: 13px;
+    color: var(--desaturated);
+}
+
+/*media query*/
+
+/*mobile */
+@media screen and (min-width: 306px) and (max-width: 500px){
+    #ScreenContainer{
+        width: 100%;
+        height: 100%;
+    }
+    #Content{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(7, 200px);
+        width: 95%;
+        height: 95%;
+        padding: 10px;
+        margin-top: 75px;
+        column-gap: 0;
+        row-gap: 20px;
+    }
+    #PrincipalCard{
+        height: 100%;
+        width: 100%;
+        grid-column: 1;
+        grid-row: 1;
+    }
+    /*cards position*/
+    #card1{
+        grid-column: 1; 
+        grid-row: 2;
+    }
+
+    #card2{
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    #card3{
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    #card4{
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+    #card5{
+        grid-column: 1;
+        grid-row: 6;
+    }
+
+    #card6{
+        grid-column: 1;
+        grid-row: 7;
+    }
+
+    /*content adjust*/
+    /*principal card*/
+    .PrincipalCardBack{
+        flex-direction: row;
+        align-items: baseline;
+    }
+    .PrincipalCardBack .pc-desc{
+        margin-left: 10px;
+        align-self: center;
+    }
+    .PrincipalCardBack .pc-desc h2{
+        font-size: 25px;
+    }
+
+    .PrincipalCardDesc ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        line-height: 7px;
+    }
+    .img-div{
+        align-self: center;
+    }
+    .desc-div{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .desc-div p{
+        align-self: center;
+        font-size: 15px;
+    }
+}
+@media screen and (min-width: 300px) and (max-width: 400px) {
+    .desc-div p{
+        font-size: 10px;
+    }
+    .PrincipalCardBack .pc-desc h2{
+        font-size: 18px;
+    }
+}
+
+
+
+/*tablet responsive*/
+@media screen and (min-width: 880px) and (max-width: 1100px){
+    #Content{
+        width: 80vw;
+        height: 64vh;
+    }
+}
+@media screen  and (min-width: 750px) and (max-width: 879px){
+    #Content{
+        width: 90vw;
+        height: 63vh;
+    }
+}
+@media screen and (min-width:730px) and (max-width: 749px) {
+    #Content{
+        width: 95vw;
+        height: 61vh;
+    }
+}
+
+@media  screen and (min-width: 501px) and (max-width: 729px) {
+    #ScreenContainer{
+        width: 100%;
+        height: 100%;
+    }
+    #Content{
+        width: 75%;
+        height: 75%;
+        margin-top: 30px;
+        margin-bottom: 25px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 200px);
+    }
+    #PrincipalCard{
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+    /*cards position*/
+    #card1{
+        grid-column: 2; 
+        grid-row: 1;
+    }
+
+    #card2{
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    #card3{
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    #card4{
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    #card5{
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    #card6{
+        grid-column: 2;
+        grid-row: 4;
+    }
+}
+
