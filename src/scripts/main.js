@@ -1,16 +1,16 @@
-import { Work } from "./models/work.js";
-import { Play } from "./models/play.js";
-import { Study } from "./models/study.js";
-import { Exercise } from "./models/exercise.js";
-import { Social } from "./models/social.js";
-import { Self } from "./models/self.js";
+import Work from "./models/work.js";
+import Play from "./models/play.js";
+import Study from "./models/study.js";
+import Exercise from "./models/exercise.js";
+import Social from "./models/social.js";
+import Self from "./models/self.js";
 
-const work = new Work();
-const play = new Play();
-const study = new Study();
-const exercise = new Exercise();
-const social = new Social();
-const self = new Self();
+const work = Work;
+const play = Play;
+const study = Study;
+const exercise = Exercise;
+const social = Social;
+const self = Self;
 
 
 let workHours = document.getElementById("workHours");

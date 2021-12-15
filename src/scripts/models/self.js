@@ -1,15 +1,5 @@
-import {Data} from "./data/data.json.js";
-const data = Data; 
+import {Areas} from "./areas.js";
 
-export class Self{
-    constructor(){
-        this.currentDay = data[5].timeframes.daily.current;
-        this.previousDay = data[5].timeframes.daily.previous;
+let Self = new Areas(5);
 
-        this.currentWeek = data[5].timeframes.weekly.current;
-        this.previousWeek = data[5].timeframes.weekly.previous;
-
-        this.currentMonth = data[5].timeframes.monthly.current;
-        this.previousMonth = data[5].timeframes.monthly.previous;
-    }
-}
+export default Self;
